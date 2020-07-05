@@ -1,6 +1,7 @@
 .row-header{
     margin:0px auto;
     padding:0px;
+    color: rgb(228, 58, 15); 
 }
 
 .row-content {
@@ -11,17 +12,17 @@
 }
 
 .footer{
-    background-color: hsl(220, 45%, 19%);
+    background-color: hsla(180, 74%, 52%, 0.233);
     margin:0px auto;
     padding: 20px 0px 20px 0px;
-    color: bisque;
+    color: rgb(231, 154, 60);
 }
 
 .jumbotron {
     padding:70px 30px 70px 30px;
     margin:0px auto;
     background: #9575CD ;
-    color:floralwhite;
+    color: rgba(52, 252, 102, 0.884);
 }
 
 address{
