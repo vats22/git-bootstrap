@@ -16,6 +16,7 @@
     </head>
 
     <body>
+
         <nav class="navbar navbar-dark navbar-expand-sm fixed-top">
             <div class="container">
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
@@ -23,18 +24,59 @@
 
                 </button>
                 <a class="navbar-brand" href="#"><img src="img/logo.png" class="fluid" height="35" width="45"></a>
-                    <div class="collapse navbar-collapse" id="Navbar">
-                            <ul class="navbar-nav mr-auto">
-                                <li class="nav-item active"><a class="nav-link" href="#"><span class="fa fa-home fa-lg"></span> Home</a></li>
-                                <li class="nav-item "><a class="nav-link" href="./aboutus.html"><span class="fa fa-info fa-lg"></span> Aout Us</a></li>
-                                <li class="nav-item "><a class="nav-link" href="#"><span class="fa fa-list fa-lg"></span> Mainu</a></li>
-                                <li class="nav-item "><a class="nav-link" href="./contactus.html"><span class="fa fa-address-card fa-lg"></span> Contect</a></li>
-                            </ul>
+                <div class="collapse navbar-collapse" id="Navbar">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active"><a class="nav-link" href="#"><span class="fa fa-home fa-lg"></span> Home</a></li>
+                        <li class="nav-item "><a class="nav-link" href="./aboutus.html"><span class="fa fa-info fa-lg"></span> Aout Us</a></li>
+                        <li class="nav-item "><a class="nav-link" href="#"><span class="fa fa-list fa-lg"></span> Mainu</a></li>
+                        <li class="nav-item "><a class="nav-link" href="./contactus.html"><span class="fa fa-address-card fa-lg"></span> Contect</a></li>
+                    </ul>
+                    <span class="navbar-text">
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#loginmodal">
+                            <span class="fa fa-sign-in">
+                                Login
+                            </span>                           
+                        </button>
+                    </span>
                 </div>  
             </div>        
-
         </nav>
-
+        <div class="modal fade" id="loginmodal" role="dialog">
+            <div class="modal-dialog modal-lg" role="content">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-titile">Login</h4>
+                        <button type="button" class="close" data-dismiss="modal">
+                            &times;
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-row">
+                                <div class="form-group col-sm-4">
+                                    <label class="sr-only" for="emailid">Email Address</label>
+                                    <input type="email" class="from-control form-control-sm" id="emailid" placeholder="Enter Your Email">
+                                </div>
+                                <div class="form-group col-sm-4">
+                                    <label class="sr-only" for="password">Password</label>
+                                    <input type="password" class="form-control form-contorl-sm" id="password" placeholder="Enter Password">
+                                </div>
+                                <div class="col-sm-auto">
+                                    <div class="form-check">
+                                        <input type="checkbox" class="form-check-input">
+                                        <label class="from-check-label">Remember me</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="from-row">
+                                <butto type="button" class=" btn btn-secondary btn-col-sm ml-auto" data-dismiss="modal">Cancle</butto>
+                                <button type="submit" class="btn btn-primary btn-col-sm ml-1">Sign in</button> 
+                            </div>                           
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
         <header class="jumbotron">
             <div class="container">
                 <div class="row ">
@@ -45,10 +87,11 @@
                     <div class="col-12 col-sm align-self-center">
                         <img src="img/logo.png" class="image-fluid">  
                     </div>    
-                    <div class="offset-sm-2 col-sm- align-self-center ">
-                        <button type="submit" class="btn btn-warning btn-lg align-item-center" href="#reseve">
-                            Reserve Table
-                        </button>
+                    <div class="col-12 col-sm align-self-center ">
+                        <a role="button" class="btn btn-block nav-link btn-warning"
+                        data-toggle="tooltip" data-html="true"  
+                        title="Or Call us at<br><strong>+852 12345678</strong>"
+                        data-placement="bottom" href="#reserveform">Reserve Table</a>
                     </div>             
                 </div>               
             </div>
@@ -117,12 +160,12 @@
                     
                 </div>
             </div>
-            <div class="row row-content justify-content-center" >
+            <div class="row row-content justify-content-center" id="reserveform" >
                 <div class="col-12  col-sm-8" >
                     <div class="card" >
                         <h3 class="card-header bg-warning text-white">Reserve Table</h3>
                         <div class="card-body" >
-                            <form id="reseve">
+                            <form>
                                 <div class="form-group row">
                                     <label for="No of G" class="col-12 col-sm-2 col-form-label">No Of Guests</label>
                                     <div class="form-check col-1 col-sm-1">
@@ -232,6 +275,11 @@
         <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
         <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
         <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $('[data-toggle="tooltip"]').tooltip();
+            });
+        </script>
 
     </body>
 
