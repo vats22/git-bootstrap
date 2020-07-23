@@ -32,7 +32,7 @@
                         <li class="nav-item "><a class="nav-link" href="./contactus.html"><span class="fa fa-address-card fa-lg"></span> Contect</a></li>
                     </ul>
                     <span class="navbar-text">
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#loginmodal">
+                        <button type="button" class="btn btn-primary" id="btnshow">
                             <span class="fa fa-sign-in">
                                 Login
                             </span>                           
@@ -44,13 +44,13 @@
         <div class="modal fade" id="loginmodal" role="dialog">
             <div class="modal-dialog modal-lg" role="content">
                 <div class="modal-content">
-                    <div class="modal-header">
+                    <div class="modal-header lmodalheader">
                         <h4 class="modal-titile">Login</h4>
-                        <button type="button" class="close" data-dismiss="modal">
+                        <button type="button " class="close Lxbtn" id="loginmodalD">
                             &times;
                         </button>
                     </div>
-                    <div class="modal-body">
+                    <div class="modal-body Lbody">
                         <form>
                             <div class="form-row">
                                 <div class="form-group col-sm-4">
@@ -68,8 +68,8 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="from-row">
-                                <butto type="button" class=" btn btn-secondary btn-col-sm ml-auto" data-dismiss="modal">Cancle</butto>
+                            <div class="from-row Lbtn">
+                                <butto type="button" class=" btn btn-secondary btn-col-sm ml-auto" id="modalcancle">Cancle</butto>
                                 <button type="submit" class="btn btn-primary btn-col-sm ml-1">Sign in</button> 
                             </div>                           
                         </form>
@@ -80,13 +80,13 @@
         <div class="modal fade" id="resevermodal" role="dialog">
             <div class="modal-dialog modal-lg" role="content">
                 <div class="modal-content">
-                    <div class="modal-header">
+                    <div class="modal-header REmodalheader">
                         <h4 class="modal-title">Reserve Tabel</h4>
-                        <button type="button" class="close" data-dismiss="modal">
+                        <button type="button" class="close RExbtn" id="modaldismiss">
                             &times;
                         </button>
                     </div>
-                    <div class="modal-body">
+                    <div class="modal-body REbody">
                         <form>
                             <div class="form-row">
                                 <div class="form-group row">
@@ -153,7 +153,7 @@
                             </div>   
                             <div class="form-group row">
                                 <div class="offset-md-2 col-md-auto">
-                                    <butto type="button" class=" btn btn-secondary btn-col-sm ml-auto" data-dismiss="modal">Cancle</butto>
+                                    <butto type="button" class=" btn btn-secondary btn-col-sm ml-auto" id="canclemodal">Cancle</butto>
                                 </div>
                                 <div class=" col-md-1">
                                     <button type="submit" class="btn btn-primary">
@@ -177,7 +177,7 @@
                         <img src="img/logo.png" class="image-fluid">  
                     </div>    
                     <div class="col-12 col-sm align-self-center">
-                        <button type="button" class="btn btn-warning btn-lg" data-toggle="modal" data-target="#resevermodal">
+                        <button type="button" class="btn btn-warning btn-lg" id="booktable">
                               Reserve Talele                     
                         </button>
                     </div>             
@@ -325,7 +325,6 @@
                 </div>
                 <div class="row justify-content-center">
                     <div class="col-auto">             
-                    
                         <p>© Copyright 2018 Ristorante Con Fusion</p>
                     </div>
                 </div>
@@ -335,24 +334,7 @@
         <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
         <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
         <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-        <script>
-            $(document).ready(function(){
-                $("#mycarousel").carousel( { interval: 2000 } );
-                $("#carouselButton").click(function(){
-                if ($("#carouselButton").children("span").hasClass('fa-pause')) {
-                    $("#mycarousel").carousel('pause');
-                    $("#carouselButton").children("span").removeClass('fa-pause');
-                    $("#carouselButton").children("span").addClass('fa-play');
-                }
-                else if ($("#carouselButton").children("span").hasClass('fa-play')){
-                    $("#mycarousel").carousel('cycle');
-                    $("#carouselButton").children("span").removeClass('fa-play');
-                    $("#carouselButton").children("span").addClass('fa-pause');                    
-                }
-            });
-
-            });
-        </script>
+        <script src="js/script.js"></script>
 
     </body>
 
